@@ -2,6 +2,13 @@
 
 Bu uygulama, kullanıcıların belirli bir filmle ilgili film önerilerini alabileceği bir Flask web uygulamasıdır. Uygulama, kullanıcıdan bir film adı alır ve o filme benzer diğer filmleri önerir. Film önerileri, bir Film öneri API'sı kullanılarak alınmaktadır. Uygulama, hem film adı, hem de filmle ilgili ek bilgileri (tür, ortalama puan, oy sayısı) sunar.
 
+## Karşılama Ekranı
+![Ekran Resmi 2023-07-16 20 09 37](https://github.com/tolgaugurlu/Film-Oneri-Flask/assets/85436268/b5f76099-9c86-4f5b-a74a-64b4c1efe263)
+
+## Benzer Filmler Aratıldıktan Sonra
+![Ekran Resmi 2023-07-16 20 11 48](https://github.com/tolgaugurlu/Film-Oneri-Flask/assets/85436268/833329d6-1dd5-4fec-a7ce-c6454608a30b)
+
+
 ## Kurulum
 
 1. Projeyi klonlayın: `git clone https://github.com/yourusername/your-repo-name.git`
