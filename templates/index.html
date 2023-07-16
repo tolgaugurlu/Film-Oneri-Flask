@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Film Öneri Sistemi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Film Öneri Sistemi</h1>
+    </div>
+
+    <div class="container">
+      <form class="form-container" action="/" method="POST">
+        <input
+          type="text"
+          name="film_adi"
+          id="film_adi"
+          placeholder="Bir film adı girin"
+          required
+        />
+        <input
+          type="submit"
+          id="submit_button"
+          value="Film Önerilerini Getir"
+        />
+      </form>
+      {% if recommendations %}
+      <div class="results">
+        <h2>Benzer Film Önerileri:</h2>
+        <table>
+          <tr>
+            <th>Film Adı</th>
+            <th>Tür</th>
+            <th>Ortalama Puan</th>
+            <th>Oy Sayısı</th>
+          </tr>
+          {% for film in recommendations %}
+          <tr class="film-row">
+            <td>
+              <a href="{{ film.IMDBLink }}" target="_blank">{{ film.Name }}</a>
+            </td>
+            <td>{{ film.Genre }}</td>
+            <td>{{ film.Rate }}</td>
+            <td>{{ film.Votes }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      {% endif %}
+    </div>
+
+    <footer>
+      <p>© 2023 Film Öneri Sistemi. Tüm Hakları Saklıdır | Tolga Uğurlu</p>
+    </footer>
+  </body>
+</html>
